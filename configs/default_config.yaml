@@ -1,0 +1,22 @@
+# Default experiment configuration
+experiment:
+  name: "default_experiment"
+  seed: 42
+  
+# Model/algorithm parameters
+model:
+  type: "basic"
+  
+# Data parameters
+data:
+  source: "data/input/"
+  
+# Training/execution parameters
+training:
+  epochs: 10
+  learning_rate: 0.001
+  
+# Output settings
+output:
+  save_dir: "outputs/"
+  log_level: "INFO" 

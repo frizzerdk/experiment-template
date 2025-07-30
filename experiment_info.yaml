@@ -1,0 +1,43 @@
+# Experiment Metadata - Portfolio management and learning tracking
+
+# Experiment Identity
+name: "EXPERIMENT_NAME_PLACEHOLDER"
+description: "EXPERIMENT_DESCRIPTION_PLACEHOLDER" 
+domain: "DOMAIN_PLACEHOLDER"  # ml, control, rl, llm, cv, etc.
+tags: ["TAG1", "TAG2"]        # Any relevant tags
+
+# Context
+motivation: "Why this experiment, what does it mean to me?"
+objective: "What am I trying to achieve, the specific goal?"
+approach: "How am I approaching this, what am i going to do?"
+
+# Technical Setup
+main_script: "scripts/run_experiment.py"
+key_files:
+  - "src/core/experiment.py"
+  - "configs/default_config.yaml"
+  
+# Dependencies (external packages go in requirements.txt)
+dependencies:
+  utilities: []               # List of utility repos from this portfolio used
+
+# Progress Tracking  
+status: "planned"            # planned, active, completed, paused
+date_started: null
+date_completed: null
+estimated_time: "2-3 days"
+
+# Portfolio Information
+showcase_ready: false        # Is this ready to show in portfolio?
+key_results: []             # Main findings/achievements
+skills_demonstrated: []      # What skills does this show?
+related_work: []            # Links to related experiments
+
+# Learning
+challenges_faced: []
+lessons_learned: []
+next_experiments: []        # Ideas this sparked
+
+# Metadata
+template_version: "v1.0.0"
+created_date: "CREATED_DATE_PLACEHOLDER" 
