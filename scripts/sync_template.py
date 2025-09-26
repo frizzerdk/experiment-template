@@ -7,7 +7,7 @@ from pathlib import Path
 
 def load_experiment_info():
     """Load experiment metadata from YAML file."""
-    with open('experiment_info.yaml', 'r') as f:
+    with open('experiment_info.yaml', 'r', encoding='utf-8') as f:
         return yaml.safe_load(f)
 
 def sync_readme(info):
@@ -16,7 +16,7 @@ def sync_readme(info):
     if not readme_path.exists():
         return
     
-    content = readme_path.read_text()
+    content = readme_path.read_text(encoding='utf-8')
     
     # Update title (first # line)
     content = re.sub(r'^# .*', f'# {info["name"]}', content, flags=re.MULTILINE)
@@ -38,7 +38,7 @@ def sync_readme(info):
         skills = ', '.join(info['skills_demonstrated'])
         content = re.sub(r'\*\*Key Skills\*\*: .*', f'**Key Skills**: {skills}', content)
     
-    readme_path.write_text(content)
+    readme_path.write_text(content, encoding='utf-8')
     print("✅ Synced README.md using markdown structure")
 
 if __name__ == "__main__":

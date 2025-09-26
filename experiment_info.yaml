@@ -17,7 +17,7 @@ key_files:
   - "src/core/experiment.py"
   - "configs/default_config.yaml"
   
-# Dependencies (external packages go in requirements.txt)
+# Dependencies (external packages are managed in pyproject.toml)
 dependencies:
   utilities: []               # List of utility repos from this portfolio used
 

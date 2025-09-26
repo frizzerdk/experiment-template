@@ -5,18 +5,17 @@ EXPERIMENT_DESCRIPTION_PLACEHOLDER
 ## Quick Start
 
 ```bash
-# Setup
-pip install -e .
-pip install -r requirements.txt
+# Install dependencies (uv)
+uv sync
 
 # Sync from YAML (updates title, description, domain, status)
-python scripts/sync_template.py
+uv run python scripts/sync_template.py
 
 # Run tests
-pytest
+uv run pytest
 
 # Run experiment
-python scripts/run_experiment.py
+uv run python scripts/run_experiment.py
 
 # Analyze results
 jupyter notebook notebooks/analysis.ipynb
@@ -49,7 +48,7 @@ jupyter notebook notebooks/analysis.ipynb
 
 ## Dependencies
 
-**External packages**: See `requirements.txt` for all pip-installable dependencies.
+**External packages**: See `pyproject.toml` for all project dependencies. Use `uv add <package>` to add new dependencies.
 
 **Portfolio utilities**: [List any shared utilities from this portfolio - also tracked in `experiment_info.yaml`]
 
